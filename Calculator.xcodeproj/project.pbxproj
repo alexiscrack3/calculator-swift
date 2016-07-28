@@ -12,6 +12,7 @@
 		5E4FD0781CD72B07007B2B35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4FD0761CD72B07007B2B35 /* Main.storyboard */; };
 		5E4FD07A1CD72B07007B2B35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4FD0791CD72B07007B2B35 /* Assets.xcassets */; };
 		5E4FD07D1CD72B07007B2B35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4FD07B1CD72B07007B2B35 /* LaunchScreen.storyboard */; };
+		5EEDDB681D4AA11D004EC60C /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEDDB671D4AA11D004EC60C /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5E4FD0791CD72B07007B2B35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E4FD07C1CD72B07007B2B35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E4FD07E1CD72B07007B2B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EEDDB671D4AA11D004EC60C /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				5E4FD0721CD72B07007B2B35 /* AppDelegate.swift */,
 				5E4FD0741CD72B07007B2B35 /* ViewController.swift */,
+				5EEDDB671D4AA11D004EC60C /* CalculatorBrain.swift */,
 				5E4FD0761CD72B07007B2B35 /* Main.storyboard */,
 				5E4FD0791CD72B07007B2B35 /* Assets.xcassets */,
 				5E4FD07B1CD72B07007B2B35 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEDDB681D4AA11D004EC60C /* CalculatorBrain.swift in Sources */,
 				5E4FD0751CD72B07007B2B35 /* ViewController.swift in Sources */,
 				5E4FD0731CD72B07007B2B35 /* AppDelegate.swift in Sources */,
 			);

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C1CDF2CE2FCB0E1B4824B67DA4382E02B92E991A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AB64636DA28D0C8EBA501C77AF5BE4B1447E9403" : 0,
+    "C1CDF2CE2FCB0E1B4824B67DA4382E02B92E991A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "41396E64-0AE9-4CBD-B663-A8C238F3045B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AB64636DA28D0C8EBA501C77AF5BE4B1447E9403" : "..",
+    "C1CDF2CE2FCB0E1B4824B67DA4382E02B92E991A" : "swift-calculator\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Calculator",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Calculator.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:alexiscrack3\/ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AB64636DA28D0C8EBA501C77AF5BE4B1447E9403"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:alexiscrack3\/swift-calculator.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C1CDF2CE2FCB0E1B4824B67DA4382E02B92E991A"
+    }
+  ]
+}

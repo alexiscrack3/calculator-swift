@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Calculator
-//
-//  Created by Alexis Ortega on 5/2/16.
-//  Copyright © 2016 Alexis Ortega. All rights reserved.
-//
 
 import UIKit
 

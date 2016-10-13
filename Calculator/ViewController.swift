@@ -2,24 +2,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet private weak var displayLabel: UILabel!
+    @IBOutlet fileprivate weak var displayLabel: UILabel!
     
-    private var _userIsInTheMiddleOfTyping: Bool = false
-    private var _brain = CalculatorBrain()
+    fileprivate var userIsInTheMiddleOfTyping = false
+    fileprivate var brain = CalculatorBrain()
     
-    @IBAction private func touchDigit(sender: UIButton) {
+    @IBAction fileprivate func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
         
-        if _userIsInTheMiddleOfTyping {
+        if userIsInTheMiddleOfTyping {
             let textCurrentlyInDisplay = displayLabel.text!
             displayLabel.text = textCurrentlyInDisplay + digit
         } else {
             displayLabel.text = digit
         }
-        _userIsInTheMiddleOfTyping = true
+        userIsInTheMiddleOfTyping = true
     }
     
-    private var displayValue: Double {
+    fileprivate var displayValue: Double {
         get {
             return Double(displayLabel.text!)!
         }
@@ -28,23 +28,15 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction private func performOperation(sender: UIButton) {
-        if _userIsInTheMiddleOfTyping {
-            _brain.setOperand(displayValue)
-            _userIsInTheMiddleOfTyping = false
+    @IBAction fileprivate func performOperation(_ sender: UIButton) {
+        if userIsInTheMiddleOfTyping {
+            brain.setOperand(displayValue)
+            userIsInTheMiddleOfTyping = false
         }
         
         if let mathematicalSymbol = sender.currentTitle {
-            _brain.performOperation(mathematicalSymbol)
+            brain.performOperation(mathematicalSymbol)
         }
-        displayValue = _brain.result
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        displayValue = brain.result
     }
 }

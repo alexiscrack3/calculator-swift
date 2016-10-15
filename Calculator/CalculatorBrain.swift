@@ -7,10 +7,12 @@ func multiply(_ op1: Double, op2: Double) -> Double {
 
 class CalculatorBrain {
     fileprivate var accumulator = 0.0
+    fileprivate var internalProgram = [Any]()
     fileprivate var pending: PendingBinaryOperationInfo?
     
     func setOperand(_ operand: Double) {
         accumulator = operand
+        internalProgram.append(operand)
     }
     
     fileprivate var operations: Dictionary<String, Operation> = [
@@ -34,6 +36,7 @@ class CalculatorBrain {
     }
     
     func performOperation(_ symbol: String) {
+        internalProgram.append(symbol)
         if let operation = operations[symbol] {
             switch operation {
             case .constant(let value):
@@ -59,6 +62,31 @@ class CalculatorBrain {
     fileprivate struct PendingBinaryOperationInfo {
         var binaryFunction: (Double, Double) -> Double
         var firstOperand: Double
+    }
+    
+    typealias PropertyList = Any
+    
+    var program: PropertyList {
+        get {
+            return internalProgram
+        } set {
+            clear()
+            if let arrayOfOps = newValue as? [Any] {
+                for op in arrayOfOps {
+                    if let operand = op as? Double {
+                        setOperand(operand)
+                    } else if let operation = op as? String {
+                        performOperation(operation)
+                    }
+                }
+            }
+        }
+    }
+    
+    fileprivate func clear() {
+        accumulator = 0.0
+        pending = nil
+        internalProgram.removeAll()
     }
     
     var result: Double {

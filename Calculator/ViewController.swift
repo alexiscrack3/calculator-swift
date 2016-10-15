@@ -6,6 +6,7 @@ class ViewController: UIViewController {
     
     fileprivate var userIsInTheMiddleOfTyping = false
     fileprivate var brain = CalculatorBrain()
+    var savedProgram: CalculatorBrain.PropertyList?
     
     @IBAction fileprivate func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
@@ -26,6 +27,18 @@ class ViewController: UIViewController {
         set {
             displayLabel.text = String(newValue)
         }
+    }
+    
+    @IBAction func save() {
+        savedProgram = brain.program
+    }
+    
+    @IBAction func restore() {
+        if savedProgram != nil {
+            brain.program = savedProgram!
+            displayValue = brain.result
+        }
+        savedProgram = brain.program
     }
     
     @IBAction fileprivate func performOperation(_ sender: UIButton) {

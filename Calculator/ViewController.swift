@@ -8,6 +8,19 @@ class ViewController: UIViewController {
     fileprivate var brain = CalculatorBrain()
     var savedProgram: CalculatorBrain.PropertyList?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        brain.addUnaryOperation(symbol: "Z") { [unowned me = self] in
+//            me.displayLabel.textColor = UIColor.red
+//            return sqrt($0)
+//        }
+        
+        brain.addUnaryOperation(symbol: "Z") { [weak welf = self] in
+            welf?.displayLabel.textColor = UIColor.red
+            return sqrt($0)
+        }
+    }
+    
     @IBAction fileprivate func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
         
